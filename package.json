@@ -1,0 +1,39 @@
+{
+  "name": "@markpdf/svelte",
+  "version": "0.1.0",
+  "description": "Svelte store for the markpdf API",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["pdf", "markdown", "svelte", "sveltekit"],
+  "license": "MIT",
+  "homepage": "https://markpdf.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markpdf/markpdf-svelte"
+  },
+  "peerDependencies": {
+    "svelte": ">=4.0.0"
+  },
+  "dependencies": {
+    "@markpdf/sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "svelte": "^4.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}
